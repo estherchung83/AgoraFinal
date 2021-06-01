@@ -5,6 +5,8 @@ let handlefail = function (err) {
 var audMute = false;
 var vidMute = false;
 
+var end = false;
+
 let appId = "12ee0b37ab51440e9de81ed830ad8b7f";
 let globalStream;
 
@@ -18,6 +20,8 @@ client.init(appId, () => console.log("AgoraRTC Client Connected"), handlefail
 
 function removeMyVideoStream() {
     globalStream.stop();
+    document.getElementById("remote").style.backgroundColor = 'transparent';
+   	document.getElementById("remote-container").style.backgroundColor = 'transparent';
 }
 
 function removeVideoStream(evt) {
@@ -25,6 +29,7 @@ function removeVideoStream(evt) {
     stream.stop();
     let remDiv = document.getElementById(stream.getId())
     remDiv.parentNode.removeChild(remDiv);
+    remDiv.style.backgroundColor = 'transparent';
 }
 
 function addVideoStream1(streamId) {
@@ -32,23 +37,16 @@ function addVideoStream1(streamId) {
     let remoteContainer = document.getElementById("remote");
     let streamDiv = document.createElement("div");
     streamDiv.id = streamId;
-    streamDiv.style.height = "250px"
+    streamDiv.style.height = "250px";
+    streamDiv.style.backgroundColor = 'black';
+    streamDiv.style.marginTop = "10px";
     remoteContainer.appendChild(streamDiv)
 }
-function addVideoStream2(streamId) {
-    console.log()
-    let remoteContainer1 = document.getElementById("p1");
-    let streamDiv1 = document.createElement("div1");
-    streamDiv1.id = streamId;
-    streamDiv1.style.height = "35vh"
-    remoteContainer1.appendChild(streamDiv1)
-}
-
 
 document.getElementById("join").onclick = function () {
     let channelName = document.getElementById("channelName").value;
     let Username = document.getElementById("username").value;
-    document.getElementById("name1").value = Username;
+
     client.join(
         null,
         channelName,
@@ -81,13 +79,6 @@ document.getElementById("join").onclick = function () {
         stream.play(stream.getId());
     })
 
-     client.on("stream-subscribed", function (evt) {
-        console.log("Subscribed Stream");
-        let stream = evt.stream;
-        addVideoStream2(stream.getId());
-        stream.play(stream.getId());
-    })
-
     client.on("peer-leave", function (evt) {
         console.log("Peer has left")
         removeVideoStream(evt)
@@ -101,6 +92,19 @@ document.getElementById("end").onclick = function (){
     },handlefail)
     removeMyVideoStream();
 
+    document.getElementById("remote").style.backgroundColor = 'transparent';
+   	document.getElementById("remote-container").style.backgroundColor = 'transparent';
+
+    if(vidMute){
+    	vidMute = false;
+		document.getElementById("video-Mute").style.backgroundColor = 'white';
+    }
+
+    if (audMute) {
+    	audMute = false;
+		document.getElementById("audio-Mute").style.backgroundColor = 'white';
+    }
+
 }
 
 document.getElementById("videoMute").onclick = function (){
@@ -112,7 +116,7 @@ document.getElementById("videoMute").onclick = function (){
 	else{
 		globalStream.unmuteVideo();
 		vidMute = false;
-		document.getElementById("video-Mute").style.backgroundColor = '#099dfd';
+		document.getElementById("video-Mute").style.backgroundColor = 'white';
 	}
 }
 
@@ -125,14 +129,6 @@ document.getElementById("audioMute").onclick = function (){
 	else{
 		globalStream.unmuteAudio();
 		audMute = false;
-		document.getElementById("audio-Mute").style.backgroundColor = '#099dfd';
+		document.getElementById("audio-Mute").style.backgroundColor = 'white';
 	}
 }
-
-
-
-
-
-
-
-
