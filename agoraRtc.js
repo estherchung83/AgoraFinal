@@ -27,21 +27,13 @@ function removeVideoStream(evt) {
     remDiv.parentNode.removeChild(remDiv);
 }
 
-function addVideoStream1(streamId) {
+function addVideoStream1(streamId,name) {
     console.log()
     let remoteContainer = document.getElementById("remote");
     let streamDiv = document.createElement("div");
     streamDiv.id = streamId;
     streamDiv.style.height = "250px"
-    remoteContainer.appendChild(streamDiv)
-}
-
-function addVideoStream2(streamId) {
-    console.log()
-    let remoteContainer = document.getElementById("p1");
-    let streamDiv = document.createElement("div");
-    streamDiv.id = streamId;
-    streamDiv.style.height = "250px"
+    document.getElementById("name2").value = Username;
     remoteContainer.appendChild(streamDiv)
 }
 
@@ -49,7 +41,7 @@ function addVideoStream2(streamId) {
 document.getElementById("join").onclick = function () {
     let channelName = document.getElementById("channelName").value;
     let Username = document.getElementById("username").value;
-
+    document.getElementById("name1").value = Username;
     client.join(
         null,
         channelName,
@@ -79,7 +71,7 @@ document.getElementById("join").onclick = function () {
         console.log("Subscribed Stream");
         let stream = evt.stream;
         addVideoStream1(stream.getId());
-        addVideoStream2(stream.getId());
+        document.getElementById("name2").value = Username;
         stream.play(stream.getId());
     })
 

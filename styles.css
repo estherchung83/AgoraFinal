@@ -76,38 +76,38 @@ input {
 }
 
 #p1{
-	margin-top: 10px;
+	margin-top: 50px;
 	background-color: black;
 	border: 5px solid #3d3c3a;
     width: 35vw;
-    height: 42vh;
-    text-align: right;
+    height: 35vh;
+    text-align: left;
 }
 
 #p2{
-	margin-top: 15px;
+	margin-top: 80px;
 	background-color: black;
 	border: 5px solid #3d3c3a;
     width: 35vw;
-    height: 42vh;
+    height: 35vh;
     text-align: left;
 }
 
 #self {
-	margin-top: 10px;
+	margin-top: 50px;
 	background-color: black;
 	border: 5px solid #3d3c3a;
     width: 35vw;
-    height: 42vh;
+    height: 35vh;
     text-align: left;
 }
 
 #remote {
-    margin-top: 15px;
+    margin-top: 80px;
 	background-color: black;
 	border: 5px solid #3d3c3a;
     width: 35vw;
-    height: 42vh;
+    height: 35vh;
     text-align: left;
 }
 
@@ -138,6 +138,28 @@ input {
     height: 40px;
     margin-left: 10px;
 }
+
+#name1{
+	color: white;
+	position: absolute;
+	bottom: 93%;
+	right: 28.7%;
+	width: 35vw;
+	height: 1vh;
+	border: none;
+	background-color: #3d3c3a;
+}
+#name2{
+	color: white;
+	position: absolute;
+    top: 45%;
+	right: 28.7%;
+	width: 35vw;
+	height: 1vh;
+	border: none;
+	background-color: #3d3c3a;
+}
+
 
 #videoMute {
 	color: #099dfd;
