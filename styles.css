@@ -1,0 +1,166 @@
+body{
+	background-image: url(assets/exercises.jpeg);
+}
+
+button {
+	align-content: center;
+	width: 50px;
+	height: 30px;
+}
+
+input {
+	margin-top: 10%;
+	margin-left: 15%;
+    padding: 5px;
+    width: 70%;
+    font-size: 1.25rem;
+    border: 2px solid #099dfd;
+    border-radius: 5px;
+}
+
+#join{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+.textTop{
+	margin-top: 10%;
+	margin-left: 10px;
+	margin-right: 15px;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Kaushan Script', cursive;
+}
+
+.textBottom{
+	margin-top: 30px;
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Kaushan Script', cursive;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.LoginContainer {
+	background-color: #dedbd5;
+	width: 20vw;
+	height: 95vh;
+	border-radius: 25px;
+	border: 5px solid #696865;
+	
+}
+
+.login {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.video1 {
+	position: absolute;
+	left: 59%;
+	top: 3%;
+	width: 50vw;
+    height: 90vh;
+}
+
+.video {
+	position: absolute;
+	left: 22%;
+	top: 3%;
+	width: 50vw;
+    height: 90vh;
+
+}
+
+#p1{
+	margin-top: 10px;
+	background-color: black;
+	border: 5px solid #3d3c3a;
+    width: 35vw;
+    height: 42vh;
+    text-align: right;
+}
+
+#p2{
+	margin-top: 15px;
+	background-color: black;
+	border: 5px solid #3d3c3a;
+    width: 35vw;
+    height: 42vh;
+    text-align: left;
+}
+
+#self {
+	margin-top: 10px;
+	background-color: black;
+	border: 5px solid #3d3c3a;
+    width: 35vw;
+    height: 42vh;
+    text-align: left;
+}
+
+#remote {
+    margin-top: 15px;
+	background-color: black;
+	border: 5px solid #3d3c3a;
+    width: 35vw;
+    height: 42vh;
+    text-align: left;
+}
+
+#vod{
+	background-color: black;
+	border: 5px solid #3d3c3a;
+    width: 35vw;
+    height: 42vh;
+    text-align: right;
+}
+
+.functions {
+	position: absolute;
+	bottom: 6px;
+	left: 30vw;
+	text-align: center;
+	background-color: #c4bebc;
+	width: 35vw;
+	height: 6vh;
+	border-radius: 9px;
+}
+
+.vid {
+	margin-top: 5px;
+    background-color: white;
+    text-align: center;
+    border-radius: 9px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+#videoMute {
+	color: #099dfd;
+}
+
+#audioMute {
+	color: #099dfd;
+}
+
+#screenShare{
+	color: #099dfd;
+}
+
+#end {
+	background-color: #f03413;
+	text-align: center;
+	margin-left: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+}
+
+

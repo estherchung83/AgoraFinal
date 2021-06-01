@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Agora Final Project - VideoCall Page</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script defer src="https://friconix.com/cdn/friconix.js"> </script>
+		<script src="https://kit.fontawesome.com/cb02e5eee0.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<div class="LoginContainer">
+			<div class="textTop">
+				Exercise VideoChat
+			</div>
+			<div class="login">
+				<input type="text" placeholder="Username" id="username">
+				<input type="text" placeholder="Channel Name" id="channelName">
+				<button id="join" onclick = "login1()">Join</button>
+			</div>
+			<div class="textBottom">
+				A place to exercise with friends and family
+		</div>
+
+		<div class = "video">
+			<div id="self">
+				
+			</div>
+			<div id="remote">
+			
+			</div>
+			
+		</div>
+		<div class = "video1">
+			<div id="p1">
+				
+			</div>
+			<div id="p2">
+				
+			</div>
+		</div>
+
+		<div class="functions">
+			<button class="vid" id="video-Mute"><i class="fas fa-video-slash fa-2x" id="videoMute" ></i></button>
+			<button class="vid" id="audio-Mute"><i class="fa fa-microphone-slash fa-2x" id="audioMute"></i></button>
+			<button id="end">End Call</button>
+		</div>
+
+		<script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.0.0.js"></script>
+    	<script src="agoraRTC.js"></script>
+	</body>
+</html>
