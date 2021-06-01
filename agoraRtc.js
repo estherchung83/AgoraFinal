@@ -27,14 +27,21 @@ function removeVideoStream(evt) {
     remDiv.parentNode.removeChild(remDiv);
 }
 
-function addVideoStream1(streamId,name) {
+function addVideoStream1(streamId) {
     console.log()
     let remoteContainer = document.getElementById("remote");
     let streamDiv = document.createElement("div");
     streamDiv.id = streamId;
     streamDiv.style.height = "250px"
-    document.getElementById("name2").value = Username;
     remoteContainer.appendChild(streamDiv)
+}
+function addVideoStream2(streamId) {
+    console.log()
+    let remoteContainer1 = document.getElementById("p1");
+    let streamDiv1 = document.createElement("div1");
+    streamDiv1.id = streamId;
+    streamDiv1.style.height = "35vh"
+    remoteContainer1.appendChild(streamDiv1)
 }
 
 
@@ -71,10 +78,15 @@ document.getElementById("join").onclick = function () {
         console.log("Subscribed Stream");
         let stream = evt.stream;
         addVideoStream1(stream.getId());
-        document.getElementById("name2").value = Username;
         stream.play(stream.getId());
     })
 
+     client.on("stream-subscribed", function (evt) {
+        console.log("Subscribed Stream");
+        let stream = evt.stream;
+        addVideoStream2(stream.getId());
+        stream.play(stream.getId());
+    })
 
     client.on("peer-leave", function (evt) {
         console.log("Peer has left")
